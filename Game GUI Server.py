@@ -14,15 +14,15 @@ def socketCreation ():
     print("accept")
     global client
     client = c
-    btn1['command']=sendbtn1
-    btn2['command']=sendbtn2
-    btn3['command']=sendbtn3
-    btn4['command']=sendbtn4
-    btn5['command']=sendbtn5
-    btn6['command']=sendbtn6
-    btn7['command']=sendbtn7
-    btn8['command']=sendbtn8
-    btn9['command']=sendbtn9
+    btn1['state']= tkinter.NORMAL
+    btn2['state']= tkinter.NORMAL
+    btn3['state']= tkinter.NORMAL
+    btn4['state']= tkinter.NORMAL
+    btn5['state']= tkinter.NORMAL
+    btn6['state']= tkinter.NORMAL
+    btn7['state']= tkinter.NORMAL
+    btn8['state']= tkinter.NORMAL
+    btn9['state']= tkinter.NORMAL
     while True:
         msg= c.recv(2048).decode('ascii')
         global serverTurn 
