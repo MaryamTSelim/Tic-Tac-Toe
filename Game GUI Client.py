@@ -102,19 +102,10 @@ def socketCreation ():
     c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     c.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
     host = '127.0.0.1'
-    port = 6024
+    port = 8900
     c.connect((host,port))
     global client
     client = c
-    btn1['command']=sendbtn1
-    btn2['command']=sendbtn2
-    btn3['command']=sendbtn3
-    btn4['command']=sendbtn4
-    btn5['command']=sendbtn5
-    btn6['command']=sendbtn6
-    btn7['command']=sendbtn7
-    btn8['command']=sendbtn8
-    btn9['command']=sendbtn9
     while True:
         msg= c.recv(2048).decode('ascii')
         global clientTurn
@@ -385,6 +376,16 @@ btn9['font']=35
 btn9['width']= 10
 btn9['height']= 5
 btn9.grid(column=3,row=4,padx=5,pady=5)
+btn1['command']=sendbtn1
+btn2['command']=sendbtn2
+btn3['command']=sendbtn3
+btn4['command']=sendbtn4
+btn5['command']=sendbtn5
+btn6['command']=sendbtn6
+btn7['command']=sendbtn7
+btn8['command']=sendbtn8
+btn9['command']=sendbtn9
+   
 _thread.start_new_thread(socketCreation, () )
 
 

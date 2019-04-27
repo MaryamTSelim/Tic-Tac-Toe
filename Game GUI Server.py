@@ -7,22 +7,13 @@ def socketCreation ():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
     host = '127.0.0.1'
-    port = 6024
+    port = 8900
     s.bind((host,port))
     s.listen(5)
     c,ad = s.accept()
     print("accept")
     global client
     client = c
-    btn1['state']= tkinter.NORMAL
-    btn2['state']= tkinter.NORMAL
-    btn3['state']= tkinter.NORMAL
-    btn4['state']= tkinter.NORMAL
-    btn5['state']= tkinter.NORMAL
-    btn6['state']= tkinter.NORMAL
-    btn7['state']= tkinter.NORMAL
-    btn8['state']= tkinter.NORMAL
-    btn9['state']= tkinter.NORMAL
     while True:
         msg= c.recv(2048).decode('ascii')
         global serverTurn 
@@ -281,6 +272,15 @@ btn9['font']=35
 btn9['width']= 10
 btn9['height']= 5
 btn9.grid(column=3,row=4,padx=5,pady=5)
+btn1['command']=sendbtn1
+btn2['command']=sendbtn2
+btn3['command']=sendbtn3
+btn4['command']=sendbtn4
+btn5['command']=sendbtn5
+btn6['command']=sendbtn6
+btn7['command']=sendbtn7
+btn8['command']=sendbtn8
+btn9['command']=sendbtn9
 #thread for socket
 _thread.start_new_thread(socketCreation, () )
 window.mainloop()
