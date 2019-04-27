@@ -58,15 +58,15 @@ def socketCreation ():
             lbl4['font']=35
             lbl4['bg']='white'
             lbl4.grid(column=2,row=1,padx=5,pady=5)
-            btn1['state']= tkinter.ACTIVE
-            btn2['state']= tkinter.ACTIVE
-            btn3['state']= tkinter.ACTIVE
-            btn4['state']= tkinter.ACTIVE
-            btn5['state']= tkinter.ACTIVE
-            btn6['state']= tkinter.ACTIVE
-            btn7['state']= tkinter.ACTIVE
-            btn8['state']= tkinter.ACTIVE
-            btn9['state']= tkinter.ACTIVE
+            btn1['state']= tkinter.NORMAL
+            btn2['state']= tkinter.NORMAL
+            btn3['state']= tkinter.NORMAL
+            btn4['state']= tkinter.NORMAL
+            btn5['state']= tkinter.NORMAL
+            btn6['state']= tkinter.NORMAL
+            btn7['state']= tkinter.NORMAL
+            btn8['state']= tkinter.NORMAL
+            btn9['state']= tkinter.NORMAL
             btn1['text']= ''
             btn2['text']= ''
             btn3['text']= ''
